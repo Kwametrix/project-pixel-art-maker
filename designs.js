@@ -27,7 +27,7 @@ function makeGrid() {
 		// Select color input
 		var color;
 		color = $("#colorPicker").val();
-		$(this).css('bgcolor', color);
+		$(this).css('background-color', color);
 	});
 	
 }
