@@ -2,14 +2,7 @@
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
-var submitSize;
 
-submitSize = $('input[type="submit"]')
-
-submitSize.click(function(event) {
-  event.preventDefault();
-  makeGrid();
-});
 
 function makeGrid() {
 	
@@ -42,3 +35,12 @@ function makeGrid() {
 	});
 	
 }
+
+var submitSize;
+
+submitSize = $('input[type="submit"]')
+
+submitSize.click(function(event) {
+  event.preventDefault();
+  makeGrid();
+});
