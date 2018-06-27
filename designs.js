@@ -7,16 +7,16 @@
 function makeGrid() {
 	
 	// Select size input
-	var pixelCanvas, gridHeight, gridWidth, rows, cell;
+	var canvas, gridHeight, gridWidth, rows, cell;
 	
-	pixelCanvas = $('#pixelCanvas');
+	canvas = $('#pixelCanvas');
 	gridHeight = $('#inputHeight').val();
 	gridWidth = $('#inputWidth').val();
 	
-	pixelCanvas.children().remove()
+	canvas.children().remove()
 	
 	for (x = 0; x < gridHeight; x++) {
-	pixelCanvas.append('<tr></tr>');
+	canvas.append('<tr></tr>');
 	}
 	
 	rows = $('tr');
@@ -25,7 +25,7 @@ function makeGrid() {
 	rows.append('<td></td>');
 	} 
 	
-	cell = pixelCanvas.find('td');
+	cell = canvas.find('td');
 	
 	// When cell is clicked, color of the cell is changed
 	cell.click(function() {
