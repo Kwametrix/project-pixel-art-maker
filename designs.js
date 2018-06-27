@@ -1,5 +1,5 @@
 function makeGrid() {
-	
+	console.log('Starting to make grid');
 	// Select size input
 	var canvas, gridHeight, gridWidth, rows, cell;
 	
@@ -24,7 +24,8 @@ function makeGrid() {
 	// When cell is clicked, color of the cell is changed
 	cell.click(function() {
 		// Select color input
-		//var color;
+		console.log('Giving the cell color');
+		var color;
 		color = $("#colorPicker").val();
 		$(this).attr('bgcolor', color);
 	});
@@ -32,8 +33,6 @@ function makeGrid() {
 }
 
 // When size is submitted by the user, call makeGrid()
-
-var color;
 
 var submitSize;
 
