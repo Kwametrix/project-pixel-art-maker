@@ -1,9 +1,3 @@
-// Select color input
-// Select size input
-
-// When size is submitted by the user, call makeGrid()
-
-
 function makeGrid() {
 	
 	// Select size input
@@ -29,12 +23,15 @@ function makeGrid() {
 	
 	// When cell is clicked, color of the cell is changed
 	cell.click(function() {
+		// Select color input
 		var color;
 		color = $("#colorPicker").val();
 		$(this).attr('bgcolor', color);
 	});
 	
 }
+
+// When size is submitted by the user, call makeGrid()
 
 var submitSize;
 
