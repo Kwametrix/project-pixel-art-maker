@@ -23,4 +23,3 @@ $('.cells').click(function (event) {
 });
 
 
-$('table').remove();
