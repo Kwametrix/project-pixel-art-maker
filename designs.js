@@ -14,10 +14,11 @@ submitSize.click(function(event) {
 function makeGrid() {
 	
 	// Select size input
+	var pixelCanvas, gridHeight, gridWidth, rows, cell;
 	
-	var pixelCanvas = $('#pixelCanvas');
-	var gridHeight = $('#inputHeight').val();
-	var gridWidth = $('#inputWidth').val();
+	pixelCanvas = $('#pixelCanvas');
+	gridHeight = $('#inputHeight').val();
+	gridWidth = $('#inputWidth').val();
 	
 	pixelCanvas.children().remove()
 	
@@ -25,17 +26,18 @@ function makeGrid() {
 	pixelCanvas.append('<tr></tr>');
 	}
 	
-	var rows = $('tr');
+	rows = $('tr');
 	
 	for (y = 0; y < gridWidth; y++) {
 	rows.append('<td></td>');
 	} 
 	
-	var cell = pixelCanvas.find('td');
+	cell = pixelCanvas.find('td');
 	
 	// When cell is clicked, color of the cell is changed
 	cell.click(function() {
-		var color = $("#colorPicker").val();
+		var color;
+		color = $("#colorPicker").val();
 		$(this).attr('background-color', color);
 	});
 	
