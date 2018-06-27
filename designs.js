@@ -38,7 +38,7 @@ function makeGrid() {
 	cell.click(function() {
 		var color;
 		color = $("#colorPicker").val();
-		$(this).attr('background-color', color);
+		$(this).attr('bgcolor', color);
 	});
 	
 }
