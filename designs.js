@@ -2,51 +2,41 @@
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
+var submitSize;
+
+submitSize = $('input[type="submit"]')
+
+submitSize.click(function(event) {
+  event.preventDefault();
+  makeGrid();
+});
 
 function makeGrid() {
-	console.log("makeGrid is running!")
 	
 	// Select size input
 	
-	var canvas, cell, gridHeight, gridWidth, rows;
+	var pixelCanvas = $('#pixelCanvas');
+	var gridHeight = $('#inputHeight').val();
+	var gridWidth = $('#inputWidth').val();
 	
-	canvas = $('#pixelCanvas');
-	gridHeight = $('#inputHeight').val();
-	gridWidth = $('#inputWidth').val();
-	
-	canvas.children().remove()
+	pixelCanvas.children().remove()
 	
 	for (x = 0; x < gridHeight; x++) {
-	canvas.append('<tr></tr>');
+	pixelCanvas.append('<tr></tr>');
 	}
 	
-	rows = $('tr');
+	var rows = $('tr');
 	
 	for (y = 0; y < gridWidth; y++) {
 	rows.append('<td></td>');
 	} 
 	
-	cell = canvas.find('td');
+	var cell = pixelCanvas.find('td');
 	
-	// When td is clicked by the user, change color of td
+	// When cell is clicked, color of the cell is changed
 	cell.click(function() {
-		// Select color input
-		console.log("changeColor is running!");
-		var color;
-		color = $("#colorPicker").val();
-		$(this).attr('bgcolor', color);
+		var color = $("#colorPicker").val();
+		$(this).attr('background-color', color);
 	});
 	
 }
-
-// When size is submitted by the user, call makeGrid()
-var submitQuery;
-
-submitQuery = $('input[type="submit"]')
-
-submitQuery.click(function(event) {
-  event.preventDefault();
-  makeGrid();
-});
-
-
